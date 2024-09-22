@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Oilam</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Mening Oilam</h1>
+        <div class="buttons">
+            <button onclick="showInfo('dad')">Dadam</button>
+            <button onclick="showInfo('mom')">Onam</button>
+            <button onclick="showInfo('sister')">Opam </button>
+            <button onclick="showInfo('me')">Men</button>
+        </div>
+        <div class="info" id="info">
+            <p>Ma'lumotni ko'rish uchun tugmani bosing.</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(person) {
+            const infoDiv = document.getElementById('info');
+            let content = '';
+
+            if (person === 'dad') {
+                content = '<h2>Dadam</h2><p>Arazov X 18.12.1973</p>';
+            } else if (person === 'mom') {
+                content = '<h2>Onam</h2><p>Muratova G 21.08.1974</p>';
+            } else if (person === 'sister') {
+                content = '<h2>Opam</h2><p>Nuriyeva G 23.10.2000</p>';
+            } else if (person === 'me') {
+                content = '<h2>Men</h2><p>Nuriyev Dayanch 11.08.2002</p>';
+            }
+
+            infoDiv.innerHTML = content;
+        }
+    </script>
+</body>
+</html>
